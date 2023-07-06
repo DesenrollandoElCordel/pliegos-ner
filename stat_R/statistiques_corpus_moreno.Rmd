@@ -1,0 +1,195 @@
+---
+title: "Statistiques sur les entités nommées de lieux - corpus Moreno"
+author: "Desenrollando el Cordel"
+date: "2023-06-29"
+output:
+  pdf_document: default
+  word_document: default
+  html_document: default
+---
+
+
+```{r setup, include=FALSE}
+library(questionr)
+library(dplyr)
+library(markdown)
+library(forcats)
+```
+# Statistiques générales
+
+```{r}
+d <- read.csv('Moreno_NbPlaces.csv', encoding = "UTF-8") 
+```
+```{r}
+summary(d$Occurrences) # Permet d'afficher les quartiles, la moyenne et la médiane
+```
+En moyenne, un même lieu est présent 6 fois dans le corpus. 
+Seul 25% des lieux sont cités plus de 4 fois. 
+La moitité des lieux est cité moins de 2 fois. 
+
+```{r}
+f <- read.csv('nerList_Moreno_enriched.csv', encoding = "UTF-8")
+```
+
+Le nombre d'occurences des lieux apparaissant dans le corpus Moreno ainsi que la fréquence correspondante
+
+```{r}
+tab1 <- table(f$normalized_name) #création d'un nouvel objet uniquement les données sur la colonne normalized_name
+freq(sort(tab1, decreasing = TRUE)) #permet d'avoir les fréquences classées par ordre décroissant 
+```
+
+Graphique simple de la répartition des occurences dans le corpus Moreno. 
+```{r}
+barplot(sort(tab1), ylim = c(0,250), col="olivedrab3")
+```
+
+```{r include=FALSE}
+tab <- filter(f, normalized_name ==  "Andalucía" | normalized_name ==  "Antequera" | normalized_name ==  "Argel" | normalized_name ==  "Austria" | normalized_name ==  "Barcelona" | normalized_name ==  "Cádiz" | normalized_name ==  "Ceuta" | normalized_name ==  "Córdoba"| normalized_name ==  "Dinamarca"| normalized_name ==  "España"| normalized_name ==  "Francia"| normalized_name ==  "Gibraltar"| normalized_name ==  "Granada"| normalized_name ==  "Indias Occidentales"| normalized_name ==  "Jerez de la Frontera"| normalized_name ==  "Madrid"| normalized_name ==  "Málaga"| normalized_name ==  "Roma"| normalized_name ==  "Sevilla"| normalized_name ==  "Toledo"| normalized_name ==  "Turquía"| normalized_name ==  "Valencia"| normalized_name ==  "Valladolid") #création d'un autre jeu de données avec uniquement les noms de lieux apparaiissant plus de 20 fois dans le corpus
+```
+
+ Les noms de lieux apparaissant plus de 20 fois dans le corpus : 
+```{r include=FALSE}
+tab2 <- table(tab$normalized_name) #création d'un nouvel objet avec uniquement les noms de lieux cités plus de 20 fois dans le corpus
+freq(tab2) # fréquences de ces noms de lieux
+```
+
+
+```{r}
+graph1 <- barplot(sort(tab2), horiz = TRUE, xlim=c(0,250), las=2, col="olivedrab3", cex.names = 0.5)
+```
+
+# Statistiques croisant deux variables
+
+## Lien entre les noms de lieux et les éditeurs (sur les noms de lieux cités plus de 20 fois dans le corpus)
+
+
+```{r}
+tab4 <- table(tab$normalized_name, tab$printer) #croisement des deux variables
+lprop(tab4) #tri à plat en ligne
+```
+Clé de lecture : Parmi toutes les occurrences du lieu Valencia, 97,4% apparaissent chez l'éditeur José María Moreno et 2,6% chez l'éditeur José María Moreno (hijo). 
+
+```{r}
+cprop(tab4) #tri à plat en colonne
+```
+Clé de lecture : Parmi tous les noms de lieux cités chez l'éditeur José María Moreno, Málaga représente 2,4% de ces noms de lieux.  
+
+### Représentation graphique 
+
+```{r, echo=FALSE}
+#f$normalized_name <- factor(f$normalized_name, levels = c("Andalucía", "Antequara", "Argel", "Austria", "Barcelona", "Cádiz", "Ceuta", "Córdoba", "Dinamarca", "España", "Francia", "Gibraltar", "Granada", "Indias Occidentales", "Jerez de la Frontera", "Madrid", "Málaga", "Roma", "Sevilla", "Toledo", "Turquía", "Valencia", "Valladolid"))
+#table(f$printer, f$normalized_name)
+tab5 <- table(tab$printer, tab$normalized_name)
+colors=c("olivedrab1", "olivedrab3", "olivedrab")
+barplot(tab5, ylab="Nombre d'occurences", col=colors, ylim=c(0,250), cex.names=0.7, las =2)
+legend("topleft", xpd = TRUE, legend = c("José María Moreno", "José María Moreno (hijo)", "Manuel Belloso"), fill=colors)
+
+```
+
+### Tableau correspondant
+
+```{r}
+tab5
+```
+
+
+## Lien entre les noms de lieux et les dates (sur les noms de lieux cités plus de 20 fois dans le corpus)
+
+```{r}
+tab5 <- table(tab$normalized_name, tab$date)
+lprop(tab5)
+```
+Clé de lecture : Parmi toutes les occurrences du lieu Valencia, 68,4% apparaissent entre 1850 et 1859.
+
+```{r}
+cprop(tab5)
+```
+Clé de lecture : Parmi tous les noms de lieux cités entre 1850 et 1859, Málaga représente 2,7% de ces lieux. 
+
+### Représentation graphique 
+
+```{r, echo=FALSE}
+tab10 <- table(tab$date, tab$normalized_name)
+colors=c("maroon1", "maroon3", "maroon", "maroon4", "magenta4")
+barplot(tab10, ylab="Nombre d'occurences", col=colors, ylim=c(0,250), las=2, cex.names = 0.7)
+legend("topleft", xpd = TRUE, legend = c("[s.a]", "1840-1849", "1850-1859", "1860-1869", "1870-1879"), fill=colors)
+```
+
+### Tableau correspondant 
+ 
+```{r}
+tab10
+```
+
+
+## Lien entre les noms de lieux et le type de texte (sur les noms de lieux cités plus de 20 fois dans le corpus)
+
+```{r}
+tab7 <- table(tab$normalized_name, tab$genre) #croisement des deux variables
+lprop(tab7) # tri à plat en ligne
+```
+Clé de lecture : Parmi toutes les occurrences du lieu Valencia, 97,4% apparaissent dans des textes profanes.
+
+```{r}
+cprop(tab7) #tri à plat en colonne
+```
+Clé de lecture : Parmi les textes profanes, Málaga représente 2,6% des noms de lieux cités. 
+
+### Représentation graphique
+
+```{r, echo=FALSE}
+tab13 <- table(tab$genre, tab$normalized_name)
+colors=c("olivedrab1", "olivedrab3")
+barplot(tab13, ylab="Nombre d'occurences", col=colors, ylim=c(0,250),las=2, cex.names = 0.7)
+legend("topleft", xpd = TRUE, legend = c("Profano", "Sagrado"),fill=colors)
+
+```
+
+### Tableau correspondant 
+
+```{r}
+tab13
+```
+
+
+## Lien entre les noms de lieux et le genre des textes (sur les noms de lieux cités plus de 20 fois dans le corpus)
+
+```{r}
+tab8 <- table(tab$normalized_name, tab$type_text) #croisement des deux variables
+lprop(tab8) #tri à plat en ligne
+```
+Clé de lecture : Parmi toutes les occurrences du lieu Valencia, 31,6% se trouvent dans des relaciones.
+
+```{r}
+cprop(tab8) #tri à plat en colonne
+```
+Clé de lecture : Parmi les relaciones de sucesos, Málaga représente 4,5% des noms de lieux cités.
+
+### Représentation graphique
+
+```{r include=FALSE}
+tab14 <- filter(f, type_text ==  "Alabanzas" | type_text ==  "Canciones" | type_text ==  "Cantos religiosos" | type_text ==  "Cartas" | type_text ==  "Cartillas" | type_text ==  "Chascos" | type_text ==  "Chistes" | type_text ==  "Coloquios"| type_text ==  "Composiciones"| type_text ==  "Coplas"| type_text ==  "Décimas"| type_text ==  "Descripciones"| type_text ==  "Diálogos"| type_text ==  "Entremeses"| type_text ==  "Exhortación"| type_text ==  "Glosas"| type_text ==  "Historias"| type_text ==  "Jácaras"| type_text ==  "Matracas"| type_text ==  "Oraciones"| type_text ==  "Pasillos"| type_text ==  "Quintillas"| type_text ==  "Relaciones" | type_text ==  "Relaciones de sucesos"| type_text ==  "Romances"| type_text ==  "Sainetes"| type_text ==  "Sátiras"| type_text ==  "Seguidillas"| type_text ==  "Testamentos" | type_text == "Trovos", normalized_name ==  "Andalucía" | normalized_name ==  "Antequera" | normalized_name ==  "Argel" | normalized_name ==  "Austria" | normalized_name ==  "Barcelona" | normalized_name ==  "Cádiz" | normalized_name ==  "Ceuta" | normalized_name ==  "Córdoba"| normalized_name ==  "Dinamarca"| normalized_name ==  "España"| normalized_name ==  "Francia"| normalized_name ==  "Gibraltar"| normalized_name ==  "Granada"| normalized_name ==  "Indias Occidentales"| normalized_name ==  "Jerez de la Frontera"| normalized_name ==  "Madrid"| normalized_name ==  "Málaga"| normalized_name ==  "Roma"| normalized_name ==  "Sevilla"| normalized_name ==  "Toledo"| normalized_name ==  "Turquía"| normalized_name ==  "Valencia"| normalized_name ==  "Valladolid") #il y a des données manquantes dans le type_text, donc j'ai créer un nouveau tableau avec les données qui nous intéressantes en excluant les données manquantes qui créaient des lignes vides. 
+
+```
+
+```{r}
+tab14 <- tab14 %>% #ce code permet de replier dans une catégorie "others", les types de textes qui apparaissent moins de 12 fois. 
+    mutate(autre=fct_lump_min(tab14$type_text, min=12))
+
+fct_count(tab14$autre)
+```
+```{r}
+tab15 <- table(tab14$autre, tab14$normalized_name)
+colors=c("aquamarine", "aquamarine4", "azure4", "beige", "bisque", "blue4", "blueviolet", "brown", "cadetblue1", "chartreuse", "deeppink","yellow", "red")
+barplot(tab15, ylab="Nombre d'occurences", col=colors, ylim=c(0,250), las=2, cex.names = 0.7)
+legend("topleft", xpd = TRUE, legend = c("Canciones", "Coplas", "Décimas", "Historias", "Jácaras", "Pasillos","Relaciones", "Relaciones de sucesos", "Romances", "Sainetes", "Sátiras", "Testamentos", "Others"), fill=colors, cex=.7)
+```
+
+### Tableau correspondant 
+
+```{r}
+tab15
+```
+
+
+
