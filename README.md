@@ -16,7 +16,7 @@ The script we used for the fine-tuning of the different models can be found [her
 The application of the default Spanish NER model of Flair allowed us to obtained a F1-Score of 92%. To improve the performance of this model, we have chosen to fine-tune it. The results are available [here](trainings/Results_test_GPU/Resultat_Ner-spanish-large.txt):
 
 |   |F1-Score   | Precision  | Recall |
-|---|---|---|
+|---|---|---|---|
 |50 texts, 10 epochs     | 92,68%  | 95,74%  | 90% |
 |60 texts, 20 epochs     | 90,91%  | 91,67%  | 90% |
 
