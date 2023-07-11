@@ -23,7 +23,7 @@ The application of the default Spanish NER model of Flair allowed us to obtained
 ### Fine-tuning of *mlm-spanish-roberta-base* (MGG)
 
 The fine-tuning of another model, [*mlm-spanish-roberta-base*](https://huggingface.co/MMG/mlm-spanish-roberta-base), gives a better recall than *ner-spanish-large* with 60 texts and 20 epochs. However, the fine-tuned models did not outperform it when it comes to precision, which is more important for our project than recall.
-The detailled results are available [here](https://github.com/DesenrollandoElCordel/pliegos-ner/blob/main/trainings/Results_test_GPU/Resultat_Ner_Roberta.txt).
+The detailled results are available [here](/trainings/Results_test_GPU/Resultat_Ner_Roberta.txt).
 
 |   |F1-Score   | Precision  | Recall |
 |---|---|---|---|
@@ -31,8 +31,8 @@ The detailled results are available [here](https://github.com/DesenrollandoElCor
 |60 texts, 20 epochs     | 90,38%  | 87,04%  | 94% |
 
 ### Fine-tuning of *bert-spanish-cased-finetuned-ner* (Manuel Romero)
-We obtained our best model by fine-tuning a third model, [*bert-spanish-cased-finetuned-ner*](https://huggingface.co/mrm8488/bert-spanish-cased-finetuned-ner), whose results seemed promising for our corpus.
-The detailed results are available [here](https://github.com/DesenrollandoElCordel/pliegos-ner/tree/main/trainings).
+We obtained our [best model](/trainings/ner-bertSpanish-BestModel) by fine-tuning a third model, [*bert-spanish-cased-finetuned-ner*](https://huggingface.co/mrm8488/bert-spanish-cased-finetuned-ner), whose results seemed promising for our corpus.
+The detailed results are available [here](/trainings).
 
 |   |F1-Score   | Precision  | Recall |
 |---|---|---|---|
@@ -42,7 +42,14 @@ The detailed results are available [here](https://github.com/DesenrollandoElCord
 
 ## Results
 
-Work in progress...
+The [results](moreno-ner/moreno-IOB), obtained with our best model, have been exported in CoNLL 2002 format, which follows the [BIO format](https://en.wikipedia.org/wiki/Inside%E2%80%93outside%E2%80%93beginning_(tagging)), with this [script](moreno-ner/ner-corpus-moreno.ipynb). To develop different visualisations with the place names, we transformed these results into several CSV files:
+
+- Extraction of the [place names](moreno-ner/nerList_Moreno.csv), with [ner2csv.py](../code-python/ner2csv.py).
+- Enrichment of the [CSV file](moreno-ner/nerList_Moreno_Wikidata.csv) with information extracted from Wikidata thanks to *Open Refine*  (Wikidata identifier, geographical coordinates, type of place, normalised names).
+- Addition of [information](moreno-ner/nerList_Moreno_enriched.csv) extracted from the XML TEI files (document's title, printer, publication place, date, type of text, URL of the document) and enrichment of the TEI files with geographical data, with [ner2tei.py](../code-python/ner2tei.py).
+- Conversion in JSON to create a map with an application called [Peripleo](../peripleo-pliegos) with [csv2json.py](../code-python/csv2json.py).
+
+
 
 ## The case of the catalan chapbooks
 
