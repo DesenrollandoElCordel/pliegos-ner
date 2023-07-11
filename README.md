@@ -13,16 +13,32 @@ In both cases, to prepare the GT, we applied the Flair model *ner-spanish-large*
 ## Trainings
 The script we used for the fine-tuning of the different models can be found [here](trainings/flair_fine_tuning.ipynb).
 ### Fine-tuning of *ner-spanish-large* (Flair's model)
-The application of the default Spanish NER model of Flair allowed us to obtained a F1-Score of 92%. To improve the performance of this model, we have chosen to fine-tune it. The results are available [here](trainings/Results_test_GPU/Resultat_Ner-spanish-large.txt):
+The application of the default Spanish NER model of Flair allowed us to obtained a F1-Score of 92%. To improve the performance of this model, we have chosen to fine-tune it. The results are available [here](trainings/Results_test_GPU/Resultat_Ner-spanish-large.txt).
 
 |   |F1-Score   | Precision  | Recall |
 |---|---|---|---|
 |50 texts, 10 epochs     | 92,68%  | 95,74%  | 90% |
 |60 texts, 20 epochs     | 90,91%  | 91,67%  | 90% |
 
-### Fine-tuning of *roberta-spanish-ner* (MGG)
+### Fine-tuning of *mlm-spanish-roberta-base* (MGG)
 
-Work in progress...
+The fine-tuning of another model, [*mlm-spanish-roberta-base*](https://huggingface.co/MMG/mlm-spanish-roberta-base), gives a better recall than *ner-spanish-large* with 60 texts and 20 epochs. However, the fine-tuned models did not outperform it when it comes to precision, which is more important for our project than recall.
+The detailled results are available [here](https://github.com/DesenrollandoElCordel/pliegos-ner/blob/main/trainings/Results_test_GPU/Resultat_Ner_Roberta.txt).
+
+|   |F1-Score   | Precision  | Recall |
+|---|---|---|---|
+|50 texts, 10 epochs     | 88,24%  | 86,54%  | 90% |
+|60 texts, 20 epochs     | 90,38%  | 87,04%  | 94% |
+
+### Fine-tuning of *bert-spanish-cased-finetuned-ner* (Manuel Romero)
+We obtained our best model by fine-tuning a third model, [*bert-spanish-cased-finetuned-ner*](https://huggingface.co/mrm8488/bert-spanish-cased-finetuned-ner), whose results seemed promising for our corpus.
+The detailed results are available [here](https://github.com/DesenrollandoElCordel/pliegos-ner/tree/main/trainings).
+
+|   |F1-Score   | Precision  | Recall |
+|---|---|---|---|
+|50 texts, 10 epochs     | 90%  | 87%  | 94% |
+|60 texts, 10 epochs     | 95,08%  | 95,08%  | 95% |
+|**60 texts, 20 epochs**     | **95,87%**  | **96,67%**  | **95,08%** |
 
 ## Results
 
