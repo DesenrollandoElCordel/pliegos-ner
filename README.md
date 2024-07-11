@@ -48,9 +48,3 @@ The [results](moreno-ner/moreno-IOB), obtained with our best model, have been ex
 - Enrichment of the [CSV file](moreno-ner/nerList_Moreno_Wikidata.csv) with information extracted from Wikidata thanks to *Open Refine*  (Wikidata identifier, geographical coordinates, type of place, normalised names).
 - Addition of [information](moreno-ner/nerList_Moreno_enriched.csv) extracted from the XML TEI files (document's title, printer, publication place, date, type of text, URL of the document) and enrichment of the TEI files with geographical data, with [ner2tei.py](../code-python/ner2tei.py).
 - Conversion in JSON to create a map with an application called [Peripleo](../peripleo-pliegos) with [csv2json.py](../code-python/csv2json.py).
-
-
-
-## The case of the catalan chapbooks
-
-Work in progress...
