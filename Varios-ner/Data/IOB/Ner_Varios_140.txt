@@ -1,0 +1,1546 @@
+XACARA O
+NUEVA O
+, O
+EN O
+QUE O
+SE O
+REFIERE O
+, O
+Y O
+DAcuenta O
+de O
+veinte O
+muertes O
+que O
+una O
+Donzella O
+, O
+llamadaDoña O
+Token[18]: "Tereſa" → O (1.0)
+de O
+Llanos O
+, O
+natural O
+de O
+la O
+Cindad O
+de O
+Token[27]: "Sevilla,ſiendo" → B-LOC (1.0)
+las O
+primeras O
+á O
+dos O
+hermanos O
+Token[33]: "ſuyos" → O (1.0)
+, O
+por O
+averle O
+Token[37]: "eſ" → O (1.0)
+¬ O
+torvado O
+el O
+Token[41]: "caſarſe" → O (1.0)
+. O
+Y O
+tambien O
+fe O
+declara O
+como O
+Token[48]: "ſe" → O (1.0)
+Token[49]: "viſtió" → O (1.0)
+dehombre O
+, O
+y O
+fue O
+Token[54]: "preſa" → O (1.0)
+, O
+y O
+Token[57]: "ſentenciada" → O (1.0)
+à O
+muerte O
+, O
+y O
+Token[62]: "ſe" → O (1.0)
+viólibre O
+, O
+por O
+Token[66]: "averſe" → O (1.0)
+Token[67]: "deſcubierto" → O (1.0)
+que O
+era O
+muger,y O
+el O
+Token[72]: "dichoſo" → O (1.0)
+fin O
+que O
+tuyo O
+. O
+Token[77]: "PReſtame" → O (1.0)
+Token[78]: "ſilencio" → O (1.0)
+el O
+mundo O
+, O
+mientras O
+que O
+voy O
+explicando O
+de O
+una O
+muger O
+los O
+arrojos O
+, O
+valentias O
+, O
+y O
+Token[95]: "deſgarros" → O (1.0)
+. O
+En O
+la O
+Ciudad O
+de O
+Sevilla B-LOC
+, O
+cuyo O
+circulo O
+, O
+y O
+Token[107]: "eſpacio" → O (1.0)
+adorna O
+Febo O
+con O
+luzes O
+de O
+Token[113]: "ſus" → O (1.0)
+eminentes O
+rayos O
+. O
+Naciò O
+de O
+muy O
+nobles O
+Padres O
+Doña O
+Token[123]: "Tereſa" → O (1.0)
+de O
+Llanos O
+, O
+tan O
+Token[128]: "virtuoſa" → O (1.0)
+, O
+y O
+afable O
+. O
+como O
+Token[134]: "honeſta" → O (1.0)
+en O
+Token[136]: "ſu" → O (1.0)
+recato O
+. O
+La O
+infandió O
+, O
+Token[142]: "ſu" → O (1.0)
+corazon O
+el O
+valor O
+mas O
+Token[147]: "arraſtr" → O (1.0)
+do O
+, O
+que O
+Token[151]: "ſe" → O (1.0)
+ha O
+Token[153]: "viſto" → O (1.0)
+en O
+criatura O
+, O
+ni O
+han O
+oído O
+los O
+humanos O
+. O
+Murió O
+Token[164]: "ſu" → O (1.0)
+Padre O
+, O
+y O
+Token[168]: "ſu" → O (1.0)
+Madre O
+, O
+y O
+en O
+poder O
+de O
+dos O
+Hermanos O
+quedó O
+, O
+y O
+Token[180]: "viendoſe" → O (1.0)
+muger O
+, O
+de O
+edad O
+de O
+unos O
+veinte O
+años O
+; O
+Por O
+no O
+Token[192]: "ſujetarſe" → O (1.0)
+à O
+nadie O
+, O
+procura O
+tomar O
+Token[198]: "eſtado" → O (1.0)
+, O
+con O
+un O
+moco O
+bien O
+nacido O
+, O
+Mas O
+al O
+fin O
+Token[209]: "ſe" → O (1.0)
+lo O
+Token[211]: "eſtorvaron" → O (1.0)
+Token[212]: "ſus" → O (1.0)
+Hermanos O
+, O
+y O
+le O
+dizen O
+con O
+Token[219]: "baſtantes" → O (1.0)
+amenazas O
+, O
+que O
+Token[223]: "ſi" → O (1.0)
+Token[224]: "ſe" → O (1.0)
+Token[225]: "caſa" → O (1.0)
+con O
+èl O
+, O
+Han O
+de O
+procurar O
+matarlo O
+, O
+porque O
+no O
+es O
+à O
+Token[238]: "guſto" → O (1.0)
+de O
+ellos O
+; O
+mas O
+al O
+fin O
+lo O
+executaron O
+: O
+la O
+Token[249]: "moça" → O (1.0)
+des O
+que O
+lo O
+Token[253]: "ſupo" → O (1.0)
+, O
+Toma O
+el O
+Cielo O
+con O
+las O
+manos O
+, O
+procura O
+tomar O
+venganga O
+ella O
+de O
+Token[267]: "ſus" → O (1.0)
+dos O
+Hermanos O
+: O
+al O
+fin O
+una O
+cierta O
+noche O
+, O
+Con O
+un O
+amigo O
+gallardo O
+, O
+à O
+la O
+hora O
+que O
+el O
+filencio O
+, O
+Token[289]: "eſtá" → O (1.0)
+en O
+Token[291]: "ſu" → O (1.0)
+golfo O
+Token[293]: "enfroſcado" → O (1.0)
+, O
+Token[295]: "ſe" → O (1.0)
+Token[296]: "puſo" → O (1.0)
+Token[297]: "calçon" → O (1.0)
+de O
+ante O
+, O
+Jubon O
+, O
+y O
+coleto O
+largo O
+, O
+media O
+blanca O
+, O
+y O
+alpargata O
+, O
+Token[313]: "ſu" → O (1.0)
+capa O
+, O
+y O
+Token[317]: "ſombrero" → O (1.0)
+blanco O
+; O
+tomando O
+broquel O
+, O
+y O
+Token[324]: "eſpada" → O (1.0)
+. O
+Fuè O
+al O
+parage O
+Token[329]: "acoſtumbrado" → O (1.0)
+, O
+donde O
+Token[332]: "ſabia" → O (1.0)
+que O
+Token[334]: "eſtavan" → O (1.0)
+; O
+llegó O
+, O
+y O
+Token[339]: "aſſi" → O (1.0)
+les O
+ha O
+hablado O
+: O
+picaros O
+, O
+viles O
+traydores O
+, O
+Que O
+vilmente O
+aveis O
+obrado O
+, O
+en O
+darle O
+muerte O
+aquel O
+Token[358]: "moço" → O (1.0)
+, O
+mas O
+yo O
+à O
+la O
+Token[364]: "vengança" → O (1.0)
+Token[365]: "ſalgo" → O (1.0)
+, O
+y O
+vengo O
+porque O
+me O
+toca O
+: O
+Aora O
+, O
+vereis O
+villanos O
+, O
+Token[378]: "ſi" → O (1.0)
+aqui O
+la O
+razon O
+me O
+vale O
+, O
+la O
+vereis O
+en O
+Token[388]: "eſte" → O (1.0)
+Token[389]: "braço" → O (1.0)
+; O
+echando O
+mano O
+à O
+Token[394]: "ſu" → O (1.0)
+azero O
+, O
+Ellos O
+tambien O
+arrancaron O
+Token[400]: "ſus" → O (1.0)
+Token[401]: "eſpadas" → O (1.0)
+; O
+mas O
+à O
+pocos O
+movimientos O
+( O
+Token[408]: "caſo" → O (1.0)
+raro O
+! O
+) O
+dió O
+al O
+mayor O
+una O
+Token[416]: "eſtocada" → O (1.0)
+, O
+Que O
+el O
+corazon O
+le O
+ha O
+Token[423]: "paſſado" → O (1.0)
+; O
+y O
+otro O
+por O
+la O
+garganta O
+le O
+dió O
+en O
+forma O
+, O
+que O
+quedaron O
+difuntos O
+ambos O
+à O
+dos O
+, O
+Y O
+èlla O
+fué O
+Token[445]: "paſſo" → O (1.0)
+entre O
+Token[447]: "paſſo" → O (1.0)
+á O
+Token[449]: "ſu" → O (1.0)
+fortuna O
+principio O
+lo O
+de O
+más O
+valor O
+, O
+y O
+dando O
+à O
+Token[460]: "ſu" → O (1.0)
+Token[461]: "caſa" → O (1.0)
+, O
+y O
+recogió O
+A O
+Cramona O
+caminando O
+, O
+à O
+las O
+cinco O
+de O
+la O
+tarde O
+llegó O
+, O
+y O
+Token[478]: "eſtavan" → O (1.0)
+jugando O
+en O
+la O
+calle O
+à O
+la O
+pelota O
+Quatro O
+guapos O
+alentados O
+, O
+pafsó O
+, O
+no O
+Token[493]: "quitandoſe" → O (1.0)
+el O
+Token[495]: "ſombrero" → O (1.0)
+, O
+y O
+uno O
+dellos O
+reparando O
+, O
+le O
+dixo O
+Token[504]: "ſer" → O (1.0)
+Token[505]: "deſcortés" → O (1.0)
+, O
+Y O
+todos O
+Token[509]: "ſe" → O (1.0)
+alborotaron O
+, O
+metiendo O
+mano O
+à O
+Token[515]: "ſu" → O (1.0)
+Token[516]: "eſpada" → O (1.0)
+le O
+dió O
+que O
+hacer O
+un O
+buen O
+rato O
+, O
+donde O
+al O
+fin O
+mató O
+un O
+Alcalde O
+, O
+Un O
+Cochero O
+, O
+y O
+un O
+Lacayo O
+: O
+quatro O
+quedaron O
+heridos O
+, O
+y O
+por O
+Token[545]: "ſer" → O (1.0)
+tantos O
+contrarios O
+Token[548]: "ſe" → O (1.0)
+Token[549]: "eſcapó" → O (1.0)
+como O
+èlla O
+pudo O
+, O
+mas O
+fuè O
+à O
+uña O
+de O
+cavallo O
+. O
+Token[561]: "Albergóſe" → O (1.0)
+aquella O
+noche O
+en O
+una O
+Token[566]: "caſa" → O (1.0)
+de O
+campo O
+, O
+caminando O
+à O
+toda O
+Token[573]: "priſſa" → O (1.0)
+con O
+Token[575]: "muchiſſimo" → O (1.0)
+cuydado O
+. O
+Entró O
+en O
+Cuenca B-LOC
+una O
+mañana O
+, O
+donde O
+Token[585]: "poſada" → O (1.0)
+Token[586]: "buſcando" → O (1.0)
+, O
+allí O
+Token[589]: "eſtuvo" → O (1.0)
+quatro O
+dias O
+donde O
+una O
+noche O
+cenando O
+, O
+Llegaron O
+dos O
+Token[599]: "Portugueſes" → O (1.0)
+junto O
+à O
+èlla O
+Token[603]: "ſe" → O (1.0)
+Token[604]: "aſentaron" → O (1.0)
+, O
+y O
+al O
+Token[608]: "inſtante" → O (1.0)
+conoció O
+que O
+eran O
+valientes O
+lagartos O
+, O
+Les O
+dixo O
+: O
+Token[618]: "ſi" → O (1.0)
+eran O
+fervidos O
+de O
+cenar O
+, O
+con O
+que O
+afetaron O
+; O
+comieron O
+de O
+lo O
+que O
+avia O
+, O
+y O
+uno O
+fuè O
+Token[637]: "deſvergonçado" → O (1.0)
+Con O
+la O
+Token[640]: "Hueſpeda" → O (1.0)
+de O
+Token[642]: "caſa" → O (1.0)
+, O
+con O
+que O
+les O
+dixo O
+: O
+Token[649]: "Payſanos" → O (1.0)
+, O
+poco O
+, O
+á O
+poco O
+en O
+el O
+hablar O
+, O
+porque O
+aunque O
+no O
+Token[662]: "eſtè" → O (1.0)
+el O
+amo O
+, O
+Token[666]: "Baſtará" → O (1.0)
+que O
+Token[668]: "eſtè" → O (1.0)
+yo O
+aqui O
+, O
+para O
+que O
+Token[674]: "ſe" → O (1.0)
+haga O
+mas O
+Token[677]: "caſo" → O (1.0)
+: O
+Uno O
+de O
+éllos O
+Token[682]: "reſpondió" → O (1.0)
+, O
+con O
+muy O
+grande O
+Token[687]: "deſacato" → O (1.0)
+; O
+Cogió O
+el O
+plato O
+de O
+la O
+Token[694]: "meſa" → O (1.0)
+, O
+y O
+Token[697]: "ſe" → O (1.0)
+lo O
+metió O
+en O
+los O
+Token[702]: "caſcos" → O (1.0)
+: O
+Al O
+otro O
+con O
+una O
+daga O
+tres O
+puñaladas O
+le O
+hdado O
+; O
+Conque O
+ambos O
+à O
+dos O
+fueron O
+à O
+cenar O
+al O
+otro O
+barrio O
+. O
+De O
+allí O
+Token[727]: "paſsó" → O (1.0)
+á O
+Token[729]: "Zaragoça" → O (1.0)
+, O
+Token[731]: "andandoſe" → O (1.0)
+Token[732]: "paſſeando" → O (1.0)
+Por O
+Por O
+la O
+Cruz O
+del O
+Token[738]: "Corſo" → O (1.0)
+un O
+dia O
+, O
+Token[742]: "eſtava" → O (1.0)
+allí O
+un O
+Napolitano O
+hablando O
+con O
+una O
+Dama O
+, O
+Token[751]: "paſsó" → O (1.0)
+con O
+el O
+Token[754]: "ſombrero" → O (1.0)
+quitado O
+, O
+Haziendo O
+la O
+Token[759]: "corteſia" → O (1.0)
+; O
+Token[761]: "ſe" → O (1.0)
+picó O
+èl O
+, O
+y O
+agraviado O
+, O
+Token[768]: "ſe" → O (1.0)
+Token[769]: "deſpidió" → O (1.0)
+de O
+la O
+Dama O
+, O
+y O
+fué O
+Token[776]: "ſiguiendo" → O (1.0)
+Token[777]: "ſus" → O (1.0)
+Token[778]: "paſſos" → O (1.0)
+. O
+Token[780]: "Alcançóla" → O (1.0)
+, O
+y O
+dixo O
+: O
+mire O
+, O
+veo O
+que O
+es O
+un O
+desbarbado O
+, O
+que O
+fino O
+; O
+de O
+bofetadas O
+rato O
+ha O
+le O
+huviera O
+dado O
+. O
+Apenas O
+lo O
+pronunció O
+, O
+quando O
+le O
+dió O
+un O
+cintarazo O
+, O
+con O
+Token[815]: "eſpada" → O (1.0)
+, O
+y O
+vayna O
+todo O
+, O
+que O
+le O
+hizo O
+andar O
+rodando O
+. O
+Se O
+metió O
+en O
+la O
+Madalena O
+, O
+Token[833]: "valiendoſe" → O (1.0)
+del O
+Sagrado O
+; O
+dos O
+dias O
+Token[839]: "eſtuvo" → O (1.0)
+allí O
+, O
+y O
+Don O
+Geronymo O
+Pardo O
+La O
+facó O
+Token[848]: "deſte" → O (1.0)
+peligro O
+, O
+son O
+que O
+la O
+Token[854]: "puſo" → O (1.0)
+en O
+Token[856]: "ſalvo" → O (1.0)
+, O
+viniendo O
+Token[859]: "haſta" → O (1.0)
+Barcelona B-LOC
+, O
+Token[862]: "ſirviendole" → O (1.0)
+de O
+criado O
+. O
+De O
+Genova B-LOC
+dos O
+Galeras O
+en O
+Token[871]: "eſte" → O (1.0)
+Puerto O
+llegaron O
+, O
+Token[875]: "ſe" → O (1.0)
+embarcó O
+, O
+y O
+Token[879]: "fueſſe" → O (1.0)
+a O
+Gibraltar B-LOC
+, O
+alli O
+mato O
+un O
+Token[886]: "Eſcrivano" → O (1.0)
+, O
+Porque O
+le O
+hizo O
+un O
+Token[892]: "teſtimonio" → O (1.0)
+, O
+pero O
+Token[895]: "ſe" → O (1.0)
+lo O
+hizo O
+Token[898]: "falſo" → O (1.0)
+. O
+Azia O
+Cadiz O
+dió O
+la O
+buelta O
+, O
+y O
+Token[907]: "eſtando" → O (1.0)
+un O
+dia O
+jugando O
+En O
+la O
+Puerta O
+de B-LOC
+la O
+Mar O
+en O
+la O
+Token[919]: "meſa" → O (1.0)
+de O
+los O
+dados O
+; O
+Token[924]: "ſobre" → O (1.0)
+jugar O
+una O
+Token[927]: "ſuerte" → O (1.0)
+à O
+un O
+valiente O
+Sevillano O
+, O
+Se O
+bolvieron O
+contra O
+élla O
+catorze O
+, O
+ó O
+quinze O
+Soldados O
+; O
+tres O
+eran O
+en O
+Token[946]: "ſu" → O (1.0)
+favor O
+, O
+las O
+Token[950]: "eſpadas" → O (1.0)
+arrancando O
+Con O
+animo O
+, O
+y O
+valentia O
+, O
+mataron O
+cinco O
+contrarios O
+; O
+tambien O
+èlla O
+falió O
+herida O
+de O
+una O
+Token[968]: "eſtocada" → O (1.0)
+en O
+un O
+Token[971]: "braço" → O (1.0)
+. O
+En O
+Token[974]: "caſa" → O (1.0)
+del O
+Señor O
+Token[977]: "Obiſpo" → O (1.0)
+un O
+mes O
+Token[980]: "ſe" → O (1.0)
+Token[981]: "eſtuvo" → O (1.0)
+curando O
+; O
+fanó O
+, O
+y O
+fe O
+vino O
+à O
+Xerez O
+, O
+à O
+donde O
+con O
+Pedro O
+Token[996]: "Manſo" → O (1.0)
+, O
+El O
+Guapo O
+de O
+aquella O
+tierra O
+, O
+con O
+el O
+tuvo O
+un O
+cierto O
+enfado O
+, O
+y O
+para O
+Token[1013]: "defenfadarſe" → O (1.0)
+, O
+Token[1015]: "ſe" → O (1.0)
+Token[1016]: "ſalió" → O (1.0)
+con O
+él O
+al O
+campo O
+, O
+Sin O
+Token[1023]: "ofenderſe" → O (1.0)
+uno O
+à O
+otro O
+hora O
+, O
+y O
+media O
+peleando O
+; O
+con O
+mucho O
+Token[1035]: "guſto" → O (1.0)
+, O
+y O
+agrado O
+. O
+Ella O
+caminó O
+à O
+Jaen O
+; O
+donde O
+un O
+día O
+en O
+el O
+mercado O
+à O
+un O
+primo O
+de O
+Serafin O
+, O
+el O
+que O
+Token[1059]: "eſtuvo" → O (1.0)
+Token[1060]: "apriſionado" → O (1.0)
+En O
+la O
+Corte O
+de O
+Madrid B-LOC
+, O
+Token[1067]: "quiſo" → O (1.0)
+á O
+un O
+Labrador O
+honrado O
+engañarle O
+en O
+un O
+doblon O
+, O
+y O
+ella O
+lo O
+Token[1080]: "eſtava" → O (1.0)
+mirando O
+, O
+Y O
+porque O
+vido O
+la O
+infamia O
+de O
+aquel O
+Token[1090]: "falſo" → O (1.0)
+, O
+y O
+vil O
+engaño O
+, O
+Token[1096]: "ſe" → O (1.0)
+trabaron O
+de O
+palabras O
+, O
+y O
+èl O
+arrancando O
+un O
+terciado O
+Para O
+tirarle O
+, O
+mas O
+èlla O
+no O
+le O
+dió O
+lugar O
+á O
+tanto O
+, O
+porque O
+una O
+quarta O
+de O
+azero O
+le O
+echó O
+à O
+fuera O
+los O
+livianos O
+. O
+Tres O
+Torreros O
+Andaluzes O
+Token[1133]: "deſdeallí" → O (1.0)
+la O
+acompañaron O
+, O
+hasta O
+la O
+Ciudad O
+de O
+Andujar B-LOC
+, O
+Sierra B-LOC
+Morena I-LOC
+Token[1145]: "paſſando" → O (1.0)
+. O
+En O
+el O
+camino O
+encontró O
+un O
+hombre O
+que O
+iva O
+llorando O
+; O
+preguntóle O
+Token[1158]: "ſu" → O (1.0)
+afliccion O
+, O
+y O
+èl O
+le O
+dixo O
+: O
+me O
+han O
+robado O
+, O
+Muy O
+poco O
+trecho O
+de O
+aqui O
+, O
+ciento O
+y O
+cinquenta O
+ducados O
+, O
+lo O
+lo O
+que O
+Token[1184]: "ſiento" → O (1.0)
+no O
+Token[1186]: "ſon" → O (1.0)
+mios O
+, O
+y O
+tambien O
+me O
+han O
+Token[1193]: "deſnudado" → O (1.0)
+. O
+Ella O
+preguntó O
+: O
+eran O
+muchos O
+, O
+Token[1201]: "eſſos" → O (1.0)
+que O
+te O
+han O
+ultrajado O
+? O
+Token[1207]: "Reſpondió" → O (1.0)
+, O
+Señor O
+, O
+Token[1211]: "ſon" → O (1.0)
+tres O
+, O
+y O
+al O
+parecer O
+Gitanos O
+. O
+Ella O
+le O
+dixo O
+: O
+pues O
+vé O
+à O
+Token[1226]: "eſte" → O (1.0)
+Lugar O
+mas O
+cercano O
+, O
+y O
+aguardame O
+allí O
+dos O
+dias O
+, O
+y O
+le O
+dió O
+un O
+real O
+de O
+quatro O
+para O
+que O
+Token[1246]: "ſe" → O (1.0)
+Token[1247]: "ſuſtentaſſe" → O (1.0)
+, O
+Y O
+èlla O
+por O
+unos O
+barrancos O
+, O
+por O
+entre O
+peñas O
+, O
+y O
+jaras O
+adonde O
+los O
+ha O
+encontrado O
+, O
+y O
+les O
+dize O
+: O
+Amigos O
+mios O
+, O
+Por O
+cierto O
+que O
+me O
+he O
+alegrado O
+de O
+que O
+he O
+hallado O
+compañia O
+, O
+y O
+vengo O
+muy O
+fatigado O
+, O
+porque O
+tres O
+amigos O
+mios O
+han O
+Token[1295]: "preſo" → O (1.0)
+, O
+y O
+yo O
+me O
+he O
+Token[1301]: "eſcapado" → O (1.0)
+. O
+Un O
+Cavallero O
+ha O
+Token[1306]: "ſalido" → O (1.0)
+, O
+tan O
+Token[1309]: "ſolo" → O (1.0)
+Token[1310]: "conſu" → O (1.0)
+criado O
+, O
+y O
+trahe O
+mas O
+de O
+mil O
+doblones O
+, O
+porque O
+lo O
+Token[1322]: "ſupe" → O (1.0)
+en O
+Almagro B-LOC
+. O
+Lo O
+que O
+conviene O
+, O
+Token[1330]: "eſta" → O (1.0)
+noche O
+es O
+, O
+que O
+Token[1335]: "eſtèmos" → O (1.0)
+Token[1336]: "deſviados" → O (1.0)
+unos O
+de O
+otros O
+, O
+que O
+Token[1342]: "aſſi" → O (1.0)
+podemos O
+mas O
+bien O
+cercarlos O
+. O
+Conque O
+al O
+fin O
+fe O
+dividieron O
+, O
+los O
+tres O
+con O
+algo O
+Token[1358]: "diſtantes" → O (1.0)
+, O
+y O
+élla O
+con O
+Token[1363]: "induſtria" → O (1.0)
+, O
+y O
+valor O
+à O
+los O
+dos O
+ha O
+degollado O
+, O
+Y O
+al O
+tercero O
+le O
+dió O
+la O
+muerte O
+con O
+un O
+fuerte O
+Token[1383]: "carabinaço" → O (1.0)
+; O
+quitóles O
+la O
+cantidad O
+, O
+que O
+al O
+otro O
+avian O
+robado O
+. O
+A O
+Villa B-LOC
+Manrique I-LOC
+fué O
+donde O
+el O
+dinero O
+ha O
+entregado O
+al O
+tal O
+Token[1406]: "ſujeto" → O (1.0)
+, O
+y O
+quedó O
+agradecido O
+del O
+Token[1412]: "caſo" → O (1.0)
+. O
+Y O
+Token[1415]: "bolviendoſe" → O (1.0)
+à O
+Xerès O
+, O
+donde O
+mató O
+un O
+Token[1422]: "Eſcrivano" → O (1.0)
+por O
+cuya O
+muerte O
+fuè O
+Token[1427]: "preſa" → O (1.0)
+, O
+y O
+al O
+punto O
+la O
+Token[1433]: "ſentenciaron" → O (1.0)
+A O
+que O
+muera O
+en O
+una O
+horca O
+, O
+y O
+viendo O
+el O
+pleyto O
+mal O
+parado O
+, O
+Token[1448]: "confeſsó" → O (1.0)
+que O
+era O
+muger O
+, O
+y O
+al O
+Virrey O
+cuenta O
+le O
+han O
+dado O
+. O
+Embiò O
+quatro O
+mugeres O
+, O
+à O
+donde O
+la O
+Token[1468]: "regiſtraron" → O (1.0)
+, O
+y O
+viendo O
+que O
+era O
+verdad O
+, O
+al O
+punto O
+la O
+han O
+perdonado O
+; O
+Porque O
+muchos O
+Cavalleros O
+, O
+y O
+Señores O
+de O
+grande O
+fama O
+, O
+por O
+empeño O
+lo O
+tomaron O
+, O
+librandola O
+de O
+tal O
+Token[1500]: "eſtrago" → O (1.0)
+, O
+En O
+la O
+Token[1504]: "glorioſa" → O (1.0)
+Santa O
+Ana O
+luego O
+el O
+Habito O
+le O
+han O
+dado O
+donde O
+Token[1514]: "ſirviendo" → O (1.0)
+à O
+Dios O
+Token[1517]: "eſtá" → O (1.0)
+con O
+muchos O
+Token[1520]: "aplauſos" → O (1.0)
+, O
+Token[1522]: "Eſta" → O (1.0)
+es O
+la O
+vida O
+, O
+Señores O
+, O
+de O
+Doña O
+Token[1531]: "Tereſa" → O (1.0)
+de O
+Llanos O
+, O
+la O
+que O
+hizo O
+tantas O
+muertes O
+, O
+Token[1541]: "ſu" → O (1.0)
+honor O
+continuo O
+guardando O
+. O
