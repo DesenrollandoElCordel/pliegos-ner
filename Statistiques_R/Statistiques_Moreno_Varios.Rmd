@@ -1,0 +1,305 @@
+---
+title: "Statistiques sur les entités nommées de lieux - corpus Moreno + Varios"
+author: "Desenrollando el Cordel"
+date: "2024-07-15"
+output:
+  pdf_document: default
+  word_document: default
+  html_document: default
+---
+
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(plotly)
+library(dplyr)
+```
+# Análisis General del Corpus
+
+```{r}
+# Charger les données
+df <- read.csv("/Users/pauline/Documents/DocumentsSandoz/Sandoz/pliegos-ner/stat_R/NER_List_All_18.csv", stringsAsFactors = FALSE)
+
+# Supprimer les lignes où normalized_name est vide ou contient uniquement des espaces
+df <- df %>%
+  filter(trimws(normalized_name) != "")
+
+# Compter les occurrences de chaque nom
+occurrences_df <- df %>%
+  group_by(normalized_name) %>%
+  summarise(Occurrences = n(), .groups = 'drop') %>%
+  arrange(desc(Occurrences))
+
+# Générer un graphique avec les occurrences sur une échelle logarithmique
+plot <- plot_ly(occurrences_df, 
+                x = ~reorder(normalized_name, -Occurrences), 
+                y = ~Occurrences, 
+                type = 'bar', 
+                marker = list(color = '#18534F', opacity = 0.9)) %>%
+  layout(title = list(text = "Análisis general del corpus", 
+                      font = list(family = "Cinzel Decorative", size = 24)),
+         xaxis = list(title = "Lieux", 
+                      titlefont = list(family = "Oswald", size = 18),
+                      tickfont = list(family = "Helvetica", size = 14)),
+         yaxis = list(title = "Occurrences", 
+                      titlefont = list(family = "Oswald", size = 18),
+                      tickfont = list(family = "Helvetica", size = 14),
+                      type = "log",
+                      dtick = 1,
+                      gridcolor = 'rgba(200, 200, 200, 0.3)',
+                      tickvals = c(1, 2, 5, 10, 20, 50, 100, 200, 500, 668)), 
+         font = list(family = "Helvetica"),
+         plot_bgcolor = 'rgba(240, 240, 240, 0.5)', 
+         paper_bgcolor = 'rgba(250, 250, 250, 1)', 
+         margin = list(l = 50, r = 50, b = 150, t = 50),
+         annotations = list(
+           x = 0,
+           y = max(occurrences_df$Occurrences),
+           text = paste0(max(occurrences_df$Occurrences), " Occurrences"),
+           xref = "paper",
+           yref = "y",
+           showarrow = FALSE,
+           font = list(size = 12)
+         ),
+         bargap = 0.2)
+
+plot
+```
+#Distribución de topónimos por colección
+```{r}
+# Ajouter une colonne pour les collections
+df <- df %>%
+  mutate(Collection = case_when(
+    grepl("^Moreno", id_doc) ~ "Moreno",
+    grepl("^BCN|^Carmona|^Varios", id_doc) ~ "Varios, Carmona, Barcelona",
+    TRUE ~ "Autre"
+  ))
+
+# Compter les occurrences par 'normalized_name' et 'Collection'
+occurrences_by_collection <- df %>%
+  group_by(normalized_name, Collection) %>%
+  summarise(Occurrences = n(), .groups = 'drop')
+
+# Créer un graphique interactif avec les couleurs des collections
+plot <- plot_ly(occurrences_by_collection, 
+                x = ~reorder(normalized_name, -Occurrences), 
+                y = ~Occurrences, 
+                type = 'bar', 
+                color = ~Collection,
+                colors = c("#226D68", "#D6955B")) %>%
+  layout(barmode = 'stack',
+         title = list(text = "Distribución de topónimos por colección", 
+                      font = list(family = "Cinzel Decorative", size = 24)),
+         xaxis = list(title = "Lieux", 
+                      titlefont = list(family = "Oswald", size = 18),
+                      tickfont = list(family = "Helvetica", size = 14)),
+         yaxis = list(title = "Occurrences", 
+                      titlefont = list(family = "Oswald", size = 18),
+                      tickfont = list(family = "Helvetica", size = 14),
+                      gridcolor = 'rgba(200, 200, 200, 0.3)'), 
+         font = list(family = "Helvetica"),
+         plot_bgcolor = 'rgba(240, 240, 240, 0.5)', 
+         paper_bgcolor = 'rgba(250, 250, 250, 1)', 
+         margin = list(l = 50, r = 50, b = 150, t = 50),
+         bargap = 0.2)
+
+plot
+```
+
+#Distribución de topónimos por fecha de publicación
+
+```{r}
+# Compter les occurrences par 'normalized_name' et 'date'
+occurrences_by_date <- df %>%
+  group_by(normalized_name, date) %>%
+  summarise(Occurrences = n(), .groups = 'drop')
+
+# Créer un graphique interactif avec les couleurs des dates
+plot <- plot_ly(occurrences_by_date, 
+                x = ~reorder(normalized_name, -Occurrences), 
+                y = ~Occurrences, 
+                type = 'bar', 
+                color = ~date,
+                colors = c("#18534F", "#226D68", "#ECF8F6", "#FEEAA1", "#D6955B")) %>%
+  layout(barmode = 'stack',
+         title = list(text = "Distribución de topónimos por fecha de publicación", 
+                      font = list(family = "Cinzel Decorative", size = 24)),
+         xaxis = list(title = "Lieux", 
+                      titlefont = list(family = "Oswald", size = 18),
+                      tickfont = list(family = "Helvetica", size = 14)),
+         yaxis = list(title = "Occurrences", 
+                      titlefont = list(family = "Oswald", size = 18),
+                      tickfont = list(family = "Helvetica", size = 14),
+                      gridcolor = 'rgba(200, 200, 200, 0.3)'), 
+         font = list(family = "Helvetica"),
+         plot_bgcolor = 'rgba(240, 240, 240, 0.5)', 
+         paper_bgcolor = 'rgba(250, 250, 250, 1)', 
+         margin = list(l = 50, r = 50, b = 150, t = 50),
+         bargap = 0.2)
+
+plot
+```
+
+#Distribución de topónimos por lugar de publicación
+```{r}
+# Regrouper les lieux proches
+df$pubPlace <- recode(df$pubPlace, 
+                      "Carmona (Sevilla)" = "Carmona",
+                      "Córdoba" = "Cordoba",
+                      "Barcelona" = "Barcelona",
+                      "Sevilla" = "Seville",
+                      "Murcia" = "Murcia",
+                      "Madrid" = "Madrid",
+                      "Lorca" = "Lorca",
+                      "Reus" = "Reus",
+                      "Valencia" = "Valencia",
+                      "Xàtiva" = "Xativa",
+                      "Alcoy" = "Alcoy")
+
+# Garder les 20 noms les plus fréquents
+top_places <- df %>%
+  group_by(normalized_name) %>%
+  summarise(Total_Occurrences = n(), .groups = 'drop') %>%
+  arrange(desc(Total_Occurrences)) %>%
+  slice(1:20)
+
+# Filtrer les données pour ne conserver que ces 20 lieux
+filtered_data <- df %>%
+  filter(normalized_name %in% top_places$normalized_name)
+
+# Compter les occurrences par 'normalized_name' et 'pubPlace'
+occurrences_by_place <- filtered_data %>%
+  group_by(normalized_name, pubPlace) %>%
+  summarise(Occurrences = n(), .groups = 'drop')
+
+# Créer un graphique interactif avec plotly
+plot_place <- plot_ly(occurrences_by_place, 
+                      x = ~reorder(normalized_name, -Occurrences), 
+                      y = ~Occurrences, 
+                      type = 'bar', 
+                      color = ~pubPlace,
+                      colors = c("#117170", "#532B2B", "#79301B", "#F14D25", "#F3D9B0", "#0E918C", "#F48950", "#C2D76B", "#2F294D"),
+                      text = ~paste(pubPlace, ": ", Occurrences),
+                      hoverinfo = 'text') %>%
+  layout(barmode = 'stack', 
+         title = list(text = "Distribución de topónimos por lugar de publicación", 
+                      font = list(family = "Cinzel Decorative", size = 24)),
+         xaxis = list(title = "Lieux", 
+                      titlefont = list(family = "Oswald", size = 18),
+                      tickfont = list(family = "Helvetica", size = 14),
+                      tickangle = -45),
+         yaxis = list(title = "Occurrences", 
+                      titlefont = list(family = "Oswald", size = 18),
+                      tickfont = list(family = "Helvetica", size = 14),
+                      gridcolor = 'rgba(200, 200, 200, 0.3)'),
+         font = list(family = "Helvetica"),
+         plot_bgcolor = 'rgba(240, 240, 240, 0.5)',
+         paper_bgcolor = 'rgba(250, 250, 250, 1)',
+         margin = list(l = 50, r = 50, b = 150, t = 50),
+         bargap = 0.2,
+         legend = list(title = list(text = "Lugar de publicación")))
+
+plot_place
+
+```
+#Distribución de Topónimos por Tipos de Texto
+```{r include=FALSE}
+# Regrouper les types de texte
+df$type_text_group <- case_when(
+  df$type_text %in% c("Historias", "Relaciones", "Relationes", "Relaciones de sucesos", "Romances", "Descripción", "Descripciones", "Chascos") ~ "Textos Narrativos",
+  df$type_text %in% c("Canciones", "Cantos Religiosos", "Coplas", "Décimas", "Glosas", "Seguidillas", "Trovos", "Villancicos", "Jácaras", "Chistes", "Compositiones") ~ "Poesías y Canciones",
+  df$type_text %in% c("Sainetes", "Diálogos", "Coloquios", "Pasillos", "Entremeses", "Matracas") ~ "Textos Dramáticos y Teatrales",
+  df$type_text %in% c("Cartas", "Evangelios", "Recetas", "Oraciones", "Testamentos", "Sátiras", "Recetas") ~ "Textos Diversos",
+  TRUE ~ "Otros"
+)
+
+# Garder les 20 noms les plus fréquents
+top_places <- df %>%
+  group_by(normalized_name) %>%
+  summarise(Total_Occurrences = n(), .groups = 'drop') %>%
+  arrange(desc(Total_Occurrences)) %>%
+  slice(1:20)
+
+# Filtrer les données pour ne conserver que ces 20 lieux
+filtered_data <- df %>%
+  filter(normalized_name %in% top_places$normalized_name)
+
+# Compter les occurrences par 'normalized_name' et 'type_text_group'
+occurrences_by_type_text <- filtered_data %>%
+  group_by(normalized_name, type_text_group) %>%
+  summarise(Occurrences = n(), .groups = 'drop')
+
+# Créer un graphique interactif avec plotly
+plot_type_text <- plot_ly(occurrences_by_type_text, 
+                      x = ~reorder(normalized_name, -Occurrences), 
+                      y = ~Occurrences, 
+                      type = 'bar', 
+                      color = ~type_text_group,
+                      colors = c("#F14D25", "#F3D9B0", "#0E918C", "#C2D76B"),
+                      text = ~paste(type_text_group, ": ", Occurrences),
+                      hoverinfo = 'text') %>%
+  layout(barmode = 'stack', 
+         title = list(text = "Distribución de topónimos por tipos de texto", 
+                      font = list(family = "Cinzel Decorative", size = 24)),
+         xaxis = list(title = "Lieux", 
+                      titlefont = list(family = "Oswald", size = 18),
+                      tickfont = list(family = "Helvetica", size = 14),
+                      tickangle = -45),
+         yaxis = list(title = "Occurrences", 
+                      titlefont = list(family = "Oswald", size = 18),
+                      tickfont = list(family = "Helvetica", size = 14),
+                      gridcolor = 'rgba(200, 200, 200, 0.3)'),
+         font = list(family = "Helvetica"),
+         plot_bgcolor = 'rgba(240, 240, 240, 0.5)',
+         paper_bgcolor = 'rgba(250, 250, 250, 1)',
+         margin = list(l = 50, r = 50, b = 150, t = 50),
+         bargap = 0.2,
+         legend = list(title = list(text = "Tipo de texto")))
+
+plot_type_text
+```
+
+#Distribución de los Lugares según el Aspecto Sagrado/Profano del Texto
+```{r include=FALSE}
+# Garder les 20 noms les plus fréquents
+top_places <- df %>%
+  group_by(normalized_name) %>%
+  summarise(Total_Occurrences = n(), .groups = 'drop') %>%
+  arrange(desc(Total_Occurrences)) %>%
+  slice(1:20)
+
+# Filtrer les données pour ne conserver que ces 20 lieux
+filtered_data <- df %>%
+  filter(normalized_name %in% top_places$normalized_name)
+
+# Compter les occurrences par 'normalized_name' et 'genre'
+occurrences_by_genre <- filtered_data %>%
+  group_by(normalized_name, genre) %>%
+  summarise(Occurrences = n(), .groups = 'drop')
+
+# Créer un graphique interactif avec plotly
+plot_genre <- plot_ly(occurrences_by_genre, 
+                      x = ~reorder(normalized_name, -Occurrences), 
+                      y = ~Occurrences, 
+                      type = 'bar', 
+                      color = ~genre,
+                      colors = c("#117170", "#532B2B"),
+                      text = ~paste(genre, ": ", Occurrences),
+                      hoverinfo = 'text') %>%
+  layout(barmode = 'stack', 
+         title = list(text = "Distribución de los lugares según el aspecto sagrado/profano del texto", 
+                      font = list(family = "Cinzel Decorative", size = 24)),
+         xaxis = list(title = "Lieux", 
+                      titlefont = list(family = "Oswald", size = 18),
+                      tickfont = list(family = "Helvetica", size = 14),
+                      tickangle = -45),
+         yaxis = list(title = "Occurrences", 
+                      titlefont = list(family = "Oswald", size = 18),
+                      tickfont = list(family = "Helvetica", size = 14),
+                      gridcolor = 'rgba(200, 200, 200, 0.3)'),
+         font = list(family = "Helvetica"),
+         plot_bgcolor = 'rgba(240, 240, 240, 0.5)',
+         paper_bgcolor = 'rgba(250, 250, 250, 1
+
+```
